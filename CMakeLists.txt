@@ -12,7 +12,7 @@ include(FetchContent)
 # \/ === ADD ALL GITHUB PROJECT DEPENDENCIES HERE === \/
 FetchContent_Declare(
     print_hello_world
-    GIT_REPOSITORY https://github.com/Mouse-Unit-07/software-hello-world.git
+    GIT_REPOSITORY https://github.com/Mouse-Unit-07/experiment-software-hello-world
     GIT_TAG main
 )
 FetchContent_MakeAvailable(print_hello_world)
