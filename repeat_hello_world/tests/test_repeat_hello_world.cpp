@@ -1,7 +1,7 @@
 /*================================ FILE INFO =================================*/
 /* Filename           : test_repeat_hello_world.cpp                           */
 /*                                                                            */
-/* File description here...                                                   */
+/* Test implementation for repeat_hello_world.c                               */
 /*                                                                            */
 /*============================================================================*/
 
@@ -10,10 +10,18 @@
 /*============================================================================*/
 extern "C" {
 #include "repeat_hello_world.h"
-extern int printHelloWorldCallCount;
 }
 
 #include <CppUTest/TestHarness.h>
+#include <CppUTestExt/MockSupport.h>
+
+/*============================================================================*/
+/*                            Mock Implementations                            */
+/*============================================================================*/
+extern "C" void printHelloWorld(void)
+{
+    mock().actualCall("printHelloWorld");
+}
 
 /*============================================================================*/
 /*                             Private Definitions                            */
@@ -25,14 +33,15 @@ extern int printHelloWorldCallCount;
 /*============================================================================*/
 TEST_GROUP(RepeatHelloWorldTests)
 {
-    void setup()
+    void setup() override
     {
-        printHelloWorldCallCount = 0;
+        mock().clear();
     }
 
-    void teardown()
+    void teardown() override
     {
-        printHelloWorldCallCount = 0;
+        mock().checkExpectations();
+        mock().clear();
     }
 };
 
@@ -41,6 +50,6 @@ TEST_GROUP(RepeatHelloWorldTests)
 /*============================================================================*/
 TEST(RepeatHelloWorldTests, ShouldCallPrintTwice)
 {
+    mock().expectNCalls(2, "printHelloWorld");
     printHelloWorldTwice();
-    LONGS_EQUAL(2, printHelloWorldCallCount);
 }
