@@ -1,7 +1,7 @@
 /*-------------------------------- FILE INFO ---------------------------------*/
 /* Filename           : main.c                                                */
 /*                                                                            */
-/* main file for for flashing/testing repeat_hello_world interface on mcu     */
+/* main file for for flashing/testing repeat_hello_world library on mcu       */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
 
@@ -34,5 +34,5 @@
 /*----------------------------------------------------------------------------*/
 int main(void)
 {
-    printHelloWorldTwice();
+    print_hello_world_twice();
 }
