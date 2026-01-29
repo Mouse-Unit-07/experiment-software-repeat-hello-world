@@ -18,9 +18,9 @@ extern "C" {
 /*============================================================================*/
 /*                            Mock Implementations                            */
 /*============================================================================*/
-extern "C" void printHelloWorld(void)
+extern "C" void print_hello_world(void)
 {
-    mock().actualCall("printHelloWorld");
+    mock().actualCall("print_hello_world");
 }
 
 /*============================================================================*/
@@ -48,8 +48,8 @@ TEST_GROUP(RepeatHelloWorldTests)
 /*============================================================================*/
 /*                                    Tests                                   */
 /*============================================================================*/
-TEST(RepeatHelloWorldTests, ShouldCallPrintTwice)
+TEST(RepeatHelloWorldTests, CallsPrintTwice)
 {
-    mock().expectNCalls(2, "printHelloWorld");
-    printHelloWorldTwice();
+    mock().expectNCalls(2, "print_hello_world");
+    print_hello_world_twice();
 }

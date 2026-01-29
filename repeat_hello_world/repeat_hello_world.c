@@ -1,7 +1,7 @@
 /*-------------------------------- FILE INFO ---------------------------------*/
 /* Filename           : repeat_hello_world.c                                  */
 /*                                                                            */
-/* Interface w/ a function to print Hello World twice                         */
+/* Implementation w/ a function to print Hello World twice                    */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
 
@@ -15,10 +15,10 @@
 /*----------------------------------------------------------------------------*/
 /*                         Public Function Definitions                        */
 /*----------------------------------------------------------------------------*/
-void printHelloWorldTwice(void)
+void print_hello_world_twice(void)
 {
-    printHelloWorld();
-    printHelloWorld();
+    print_hello_world();
+    print_hello_world();
 }
 
 /*----------------------------------------------------------------------------*/

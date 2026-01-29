@@ -5,7 +5,7 @@
 #                                                                              #
 #------------------------------------------------------------------------------#
 # \/=== Add all .c files to your build target
-add_library(repeat_hello_world_lib STATIC # <== Define this interface's build target
+add_library(repeat_hello_world_lib STATIC # <== Define this library's build target
     ${CMAKE_CURRENT_LIST_DIR}/repeat_hello_world.c
 )
 

@@ -1,11 +1,11 @@
 /*-------------------------------- FILE INFO ---------------------------------*/
-/* Filename           : c_header.h                                            */
+/* Filename           : repeat_hello_world.h                                  */
 /*                                                                            */
-/* Interface w/ a function to print Hello World                               */
+/* Interface w/ a function to repeat Hello World                              */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
-#ifndef PRINT_HELLO_WORLD_H_
-#define PRINT_HELLO_WORLD_H_
+#ifndef REPEAT_HELLO_WORLD_H_
+#define REPEAT_HELLO_WORLD_H_
 
 /*----------------------------------------------------------------------------*/
 /*                             Public Definitions                             */
@@ -15,6 +15,6 @@
 /*----------------------------------------------------------------------------*/
 /*                         Public Function Prototypes                         */
 /*----------------------------------------------------------------------------*/
-void printHelloWorldTwice(void);
+void print_hello_world_twice(void);
 
-#endif /* PRINT_HELLO_WORLD_H_ */
+#endif /* REPEAT_HELLO_WORLD_H_ */
